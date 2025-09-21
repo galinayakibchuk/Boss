@@ -13,6 +13,15 @@ body {
   color: vars.$color-black;
 }
 
+.promo {
+  background-color: vars.$color-lightgray;
+  padding: 7px 10px 9px;
+  text-align: center;
+  font-size: 11px;
+  text-transform: uppercase;
+
+}
+
 .header {
   &__inner {
     padding: 37px 0 35px 0;
@@ -84,6 +93,8 @@ body {
 
   &__logo {
     border-bottom: none;
+    margin-right: -20px;
+    margin-left: -20px;
   }
 
   &__elements {
@@ -151,12 +162,46 @@ body {
 
   &__bottom-item+.footer__bottom-item {
     position: relative;
-    &::before{
+
+    &::before {
       content: '|';
       position: absolute;
       left: -21px;
     }
   }
-
- 
 }
+
+.top {
+  min-height: 90vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    text-transform: uppercase;
+    padding: 62px 0;
+    position: absolute;
+    top: 25%;
+  }
+
+  &__title {
+    @extend %lora-400;
+    font-size: 75px;
+    max-width: 520px;
+    line-height: 1.2;
+    margin-bottom: 35px;
+  }
+
+  &__link {
+    font-size: 20px;
+    color: #fff;
+    background-color: vars.$color-black;
+    padding: 12px 38px;
+    align-self: start;
+    text-align: center;
+    border-radius: 3px;
+  }
+}
+
+.container {}
