@@ -176,6 +176,7 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
+
   &__inner {
     display: flex;
     flex-direction: column;
@@ -206,27 +207,31 @@ body {
 
 .new-collection {
   padding: 150px 0 90px;
+
   &__inner {
     display: flex;
+    position: relative;
   }
 
   &__content {
-    max-width: 480px;
+    max-width: 484px;
     padding: 75px 27px 0 40px;
     display: flex;
     flex-direction: column;
   }
 
   &__title {
-    margin-bottom:25px;
+    margin-bottom: 25px;
     @extend %lora-400;
     font-size: 45px;
     text-transform: uppercase;
+
   }
 
   &__text {
     margin-bottom: 20px;
     color: vars.$color-gray;
+    max-width: 403px;
   }
 
   &__btn {
@@ -239,30 +244,89 @@ body {
 
   &__img {
     padding-top: 75px;
-    object-fit: cover;
   }
 
   &__box {
-    position: relative;
     display: flex;
-    flex-direction: column-reverse;
-    justify-content: flex-start;
+    flex-direction: column;
+    position: absolute;
+    right: 40px;
   }
 
   &__box-img {
-    position: absolute;
-    top: 0;
-    left: -75px;
     margin-bottom: 65px;
-    object-fit: cover;
-    width: 100%;
   }
 
   &__caption {
     font-size: 20px;
     color: vars.$color-gray;
-    margin-left: 40px;
-    margin-bottom: 68px;
     max-width: 290px;
+    margin-left: auto;
+  }
+}
+
+.join-us {
+  background-color: vars.$color-darkblue;
+  color: #fff;
+
+  &__inner {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+  }
+
+  &__content {
+    padding: 94px 0;
+    max-width: 578px;
+  }
+
+  &__title {
+    @extend %lora-400;
+    font-size: 45px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+  }
+
+  &__text {
+    @extend %lora-400;
+    font-size: 30px;
+    margin-bottom: 40px;
+  }
+
+  &__form {}
+
+  &__input {
+    display: block;
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #fff;
+    background-color: transparent;
+    margin-bottom: 20px;
+    @extend %opensans-400;
+    font-size: 20px;
+    color: #fff;
+    padding: 5px 10px 5px 0;
+
+    &::placeholder {
+      color: #fff;
+    }
+  }
+
+  &__btn {
+    background-color: vars.$color-black;
+    color: #fff;
+    border: none;
+    padding: 12px;
+    text-transform: uppercase;
+    display: block;
+    width: 100%;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    border-radius: 3px;
+  }
+
+  &__caption {
+    font-size: 11px;
+    padding-left: 30px;
   }
 }
