@@ -419,3 +419,66 @@ body {
     margin-bottom: 30px;
   }
 }
+
+.our-blog {
+  padding: 150px 40px 0;
+
+  &__inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr 325px;
+    gap: 20px;
+  }
+
+  &__content {
+    grid-column: span 2;
+    max-width: 545px;
+    margin-bottom: 70px;
+    margin-left: 40px;
+  }
+
+  &__title {
+    @extend %lora-400;
+    font-size: 45px;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+  }
+
+  &__text {
+    color: vars.$color-gray;
+  }
+
+  &__box-right {
+    grid-row: span 2;
+    align-self: flex-start;
+  }
+
+  &__img {
+    width: 100%;
+  }
+
+  &__link {
+    @extend %lora-400;
+    font-size: 20px;
+    color: vars.$color-gray;
+    margin-bottom: 5px;
+  }
+
+  &__date {
+    @extend %opensans-300;
+    color: vars.$color-gray;
+    margin-bottom: 90px;
+  }
+
+  &__btn {
+    display: block;
+    padding: 10px;
+    border: 1px solid vars.$color-black;
+    text-align: center;
+  }
+
+  &__box-bottom {
+    grid-column: span 2;
+    margin-left: 40px;
+    margin-top: -35px;
+  }
+}
