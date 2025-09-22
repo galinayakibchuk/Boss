@@ -337,7 +337,7 @@ body {
   &__inner {
     display: flex;
     justify-content: center;
-    
+
   }
 
   &__content {
@@ -367,9 +367,7 @@ body {
     font-size: 20px;
   }
 
-  &__box {}
-
-  &__img{
+  &__img {
     margin-bottom: 40px;
   }
 
@@ -378,5 +376,46 @@ body {
     padding: 10px;
     border: 1px solid vars.$color-black;
     text-align: center;
+  }
+}
+
+.advantages {
+  background-color: vars.$color-darkblue;
+  color: #fff;
+
+  &__wrapper {
+    display: flex;
+    position: relative;
+  }
+
+  &__img {
+    position: absolute;
+    bottom: 0;
+    left: 40px;
+  }
+
+  &__inner {
+    margin-left: auto;
+    padding-right: 18px;
+    padding: 60px 0 38px;
+  }
+
+  &__title {
+    @extend %lora-400;
+    font-size: 45px;
+    text-transform: uppercase;
+    margin-bottom: 50px;
+    margin-left: -30px;
+  }
+
+  &__list {
+    column-count: 2;
+    column-gap: 80px;
+    list-style: initial;
+  }
+
+  &__item {
+    font-size: 20px;
+    margin-bottom: 30px;
   }
 }
