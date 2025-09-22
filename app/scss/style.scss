@@ -330,3 +330,53 @@ body {
     padding-left: 30px;
   }
 }
+
+.david-beckham {
+  padding: 90px 0 163px 40px;
+
+  &__inner {
+    display: flex;
+    justify-content: center;
+    
+  }
+
+  &__content {
+    max-width: 580px;
+    padding-left: 40px;
+    margin-right: 40px;
+  }
+
+  &__title {
+    @extend %lora-400;
+    font-size: 45px;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+  }
+
+  &__text {
+    margin-bottom: 70px;
+    color: vars.$color-gray;
+  }
+
+  &__text-decor {
+    max-width: 417px;
+    background-color: vars.$color-darkblue;
+    color: #fff;
+    padding: 20px 27px;
+    @extend %lora-400;
+    font-size: 20px;
+  }
+
+  &__box {}
+
+  &__img{
+    margin-bottom: 40px;
+  }
+
+  &__btn {
+    display: block;
+    padding: 10px;
+    border: 1px solid vars.$color-black;
+    text-align: center;
+  }
+}
