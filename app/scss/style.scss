@@ -482,3 +482,166 @@ body {
     margin-top: -35px;
   }
 }
+
+.collection-top {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+}
+
+.breadcrumbs {
+  padding: 50px 0 90px;
+
+  &__list {
+    display: flex;
+    gap: 16px;
+    color: vars.$color-gray;
+  }
+
+  &__item {
+    position: relative;
+  }
+
+  &__item+.breadcrumbs__item::before {
+    position: absolute;
+    content: '/';
+    left: -10px;
+  }
+}
+
+.collections {
+  &__title {
+    font-size: 54px;
+    @extend %lora-400;
+    text-align: center;
+    margin-bottom: 60px;
+  }
+
+  &__items {
+    display: grid;
+    grid-template-areas: "aa aa ab ba"
+      "aa aa ac ca"
+      "ad da cc cc"
+      "bd db cc cc"
+      "ef fe ea ae";
+    gap: 40px;
+  }
+
+  &__item {
+    position: relative;
+
+    &:nth-child(1) {
+      grid-area: aa;
+    }
+
+    &:nth-child(2) {
+      grid-area: ab;
+    }
+
+    &:nth-child(3) {
+      grid-area: ba;
+    }
+
+    &:nth-child(4) {
+      grid-area: ac;
+    }
+
+    &:nth-child(5) {
+      grid-area: ca;
+    }
+
+    &:nth-child(6) {
+      grid-area: ad;
+      margin-top: -130px;
+    }
+
+    &:nth-child(7) {
+      grid-area: da;
+      margin-top: -130px;
+    }
+
+    &:nth-child(8) {
+      grid-area: cc;
+    }
+
+    &:nth-child(9) {
+      grid-area: bd;
+    }
+
+    &:nth-child(10) {
+      grid-area: db;
+    }
+
+    &:nth-child(11) {
+      grid-area: ef;
+    }
+
+    &:nth-child(12) {
+      grid-area: fe;
+    }
+
+    &:nth-child(13) {
+      grid-area: ea;
+    }
+
+    &:nth-child(14) {
+      grid-area: ae;
+    }
+  }
+
+  &__like {
+    position: absolute;
+    top: 10px;
+    right: 6px;
+    border: none;
+    background-color: transparent;
+    padding: 0;
+  }
+}
+
+.pagination {
+  padding: 20px 0 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2px;
+
+  &__prev {
+    display: none;
+  }
+
+  &__arrow {
+    width: 42px;
+    height: 42px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2px;
+  }
+
+  &__link {
+    width: 42px;
+    height: 42px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__link--active {
+    border-radius: 8px;
+    background-color: vars.$color-gray;
+    color: #fff;
+  }
+
+  &__next {}
+}
+
+.pagination--disabled {}
