@@ -644,4 +644,73 @@ body {
   &__next {}
 }
 
-.pagination--disabled {}
+.pagination--disabled {
+  display: none;
+}
+
+.appointment {
+  padding: 15px 0 100px;
+
+  &__title {
+    font-size: 45px;
+    @extend %lora-400;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 77px;
+  }
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    gap: 80px;
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0;
+    max-width: 540px;
+    width: 100%;
+  }
+
+  &__content-title {
+    font-size: 30px;
+    @extend %lora-400;
+    color: vars.$color-gray;
+    margin-bottom: 80px;
+  }
+
+  &__content-text {
+    font-size: 20px;
+    @extend %opensans-700;
+    color: vars.$color-gray;
+    margin-bottom: 10px;
+  }
+
+  &__input {
+    display: block;
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid vars.$color-gray;
+    background-color: transparent;
+    padding: 20px 15px 10px 0;
+    font-size: 20px;
+    color: vars.$color-gray;
+    &::placeholder {
+      color: vars.$color-gray;
+    }
+  }
+
+  &__btn {
+    margin-top: auto;
+    width: 100%;
+    padding: 12px;
+    background-color: vars.$color-black;
+    color: #fff;
+    border-radius: 3px;
+    cursor: pointer;
+    text-transform: uppercase;
+  }
+
+  &__img {}
+}
