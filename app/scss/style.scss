@@ -1,7 +1,8 @@
 @use 'reset';
 @use 'vars';
-@use 'global';
 @use 'fonts';
+@use '../../node_modules/swiper/swiper-bundle.css';
+@use 'global';
 
 
 body {
@@ -814,7 +815,7 @@ body {
 }
 
 .radio-label {
-  padding-left: 16px;
+  padding-left: 26px;
 }
 
 .radio-box {
@@ -824,18 +825,26 @@ body {
   overflow: hidden;
   clip-path: inset(0 0 0 0);
 
-  &:checked+.radio-style::before {}
+  &:checked+.radio-style::before {
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: vars.$color-darkblue;
+    top: 2px;
+    left: 2px;
+  }
 
 }
 
 .radio-style {
   position: absolute;
-  content: '';
   width: 16px;
   height: 16px;
   border-radius: 50%;
   border: 1px solid vars.$color-gray;
-  margin-left: -16px;
+  margin-left: -26px;
   margin-top: 3px;
 }
 
@@ -850,16 +859,84 @@ body {
   overflow: hidden;
   clip-path: inset(0 0 0 0);
 
-  &:checked+.radio-style::before {}
+  &:checked+.checkbox-style::before {
+    content: '';
+    position: absolute;
+    width: 9px;
+    height: 9px;
+    border-radius: 1px;
+    background-color: vars.$color-darkblue;
+    left: 2px;
+    top: 2px;
+  }
 }
 
 .checkbox-style {
   position: absolute;
-  content: '';
   width: 15px;
   height: 15px;
   border-radius: 1px;
   border: 1px solid vars.$color-gray;
   margin-left: -20px;
   margin-top: 3px;
+}
+
+.assortment {
+  margin-bottom: 90px;
+
+  &__title {
+    padding-bottom: 20px;
+    max-width: 890px;
+    margin: 0 auto;
+    text-align: center;
+    @extend %lora-400;
+    font-size: 30px;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    border-bottom: 2px solid vars.$color-lightgray;
+  }
+
+  &__slider {
+    width: 100%;
+    overflow: hidden;
+    max-width: 950px;
+    padding: 0 30px;
+    margin: 0 auto;
+    position: relative;
+  }
+
+
+  &__slide {
+    text-align: center;
+    color: vars.$color-gray;
+    font-size: 20px;
+  }
+
+  &__slide-img {
+    margin-bottom: 20px;
+  }
+
+  &__slide-title {
+    margin-bottom: 10px;
+  }
+
+  &__slide-price {
+    @extend %opensans-700;
+
+  }
+
+  &__button {
+    position: absolute;
+    z-index: 10;
+    cursor: pointer;
+    top: 35%;
+  }
+}
+
+.arrow-prev {
+  left: 7px;
+}
+
+.arrow-next {
+  right: 7px;
 }
