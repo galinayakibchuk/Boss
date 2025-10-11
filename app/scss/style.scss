@@ -940,3 +940,73 @@ body {
 .arrow-next {
   right: 7px;
 }
+
+.page-404 {
+
+  &__container {
+    max-width: 1560px;
+    padding: 35px 10px 22px;
+    margin: 0 auto;
+  }
+
+  &__inner {
+    display: flex;
+  }
+
+  &__img {}
+
+  &__content {
+    max-width: 730px;
+    margin: 200px 14px 0 35px;
+  }
+
+  &__title {
+    @extend %lora-400;
+    font-size: 160px;
+    line-height: 1.2;
+    margin-bottom: 80px;
+  }
+
+  &__link {
+    @extend %lora-400;
+    font-size: 48px;
+    line-height: 1.2;
+    display: flex;
+    align-items: flex-end;
+    gap: 20px;
+    span{
+      max-width: 621px;
+      text-transform: uppercase;
+      display: inline-block;
+    }
+  }
+
+  &__moving {
+    overflow: hidden;
+    opacity: .2;  
+  }
+
+  &__moving-text {
+    @extend %lora-400;
+    font-size: 160px;
+    line-height: 1.1;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    white-space: nowrap;
+    animation-name: moving;
+    animation-duration: 20s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+  }
+  @keyframes moving {
+    0%{
+      transform: translateX(0%);
+    }
+    100%{
+transform: translateX(-100%);
+    }
+    
+  }
+}
